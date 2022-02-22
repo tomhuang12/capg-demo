@@ -18,9 +18,7 @@ Once the management cluster is set up, additional workload clusters and other in
     ./prereq.sh
     ```
 
-3. Create a temporary kind cluster, bootstrap a CAPG management cluster, and pivot CAPI resource
+3. Create a temporary kind cluster, bootstrap a CAPG management cluster, pivot CAPI resource, and bootstrap flux
     ```
     ./bootstrap.sh
     ```
-
-4. 
