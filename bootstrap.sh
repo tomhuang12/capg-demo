@@ -62,3 +62,11 @@ kubectl --kubeconfig=./capg-demo.kubeconfig get gcpcluster -A
 kubectl --kubeconfig=./capg-demo.kubeconfig get gcpmachine -A
 
 echo "Pivot is done. Temporary bootstrap cluster can be deleted."
+
+echo "Bootstrap flux"
+flux bootstrap github \
+  --owner=$FLUX_REPO_OWNER \
+  --repository=$FLUX_REPO_NAME \
+  --path=clusters/capg-demo \
+  --personal \
+  --kubeconfig=$CLUSTER_NAME.kubeconfig
